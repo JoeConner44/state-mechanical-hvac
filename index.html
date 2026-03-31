@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
+/* ── IMAGE FALLBACK ──────────────────────────────────────────────── */
+img { display: block; }
+img[src]:not([src=""]) { background: #1a1a1a; }
+
 /* ── RESET & BASE ─────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 :root {
@@ -695,7 +699,7 @@ footer {
 
   <!-- Hero -->
   <section id="hero">
-    <div class="hero-photo-placeholder"></div>
+    <img src="images/hero-bg.jpg" alt="State Mechanical HVAC technician at work" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;">
     <div class="hero-content">
       <div class="hero-eyebrow">Serving Walton County, Georgia Since 1973</div>
       <h1 class="hero-title">Your Comfort is Our <em>Commitment</em></h1>
@@ -748,7 +752,7 @@ footer {
       <h2 class="section-title">Complete Heating &amp; Cooling Solutions</h2>
       <div class="divider"></div>
       <div class="services-grid">
-        <div class="service-card" onclick="showPage('services',null)">
+        <div class="service-card" onclick="showPageTo('services','repairs')">
           <div class="sc-icon">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 6v6l4 2"/></svg>
           </div>
@@ -756,7 +760,7 @@ footer {
           <div class="sc-text">Fast, reliable diagnosis and repair of heating and cooling systems for homes and businesses. We get your system running right.</div>
           <div class="sc-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
-        <div class="service-card" onclick="showPage('services',null)">
+        <div class="service-card" onclick="showPageTo('services','installation')">
           <div class="sc-icon">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
@@ -764,19 +768,19 @@ footer {
           <div class="sc-text">New system installs done right the first time. We help you select the right equipment and ensure a professional installation.</div>
           <div class="sc-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
-        <div class="service-card" onclick="showPage('services',null)">
+        <div class="service-card" onclick="showPageTo('services','tuneups')">
           <div class="sc-icon">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"/><path d="M15.499 8.5h3.501v3.501"/><path d="M3.5 9.5H5V8c0-.83.67-1.5 1.5-1.5S8 7.17 8 8v5c0 .83-.67 1.5-1.5 1.5H2"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
-          <div class="sc-title">System Cleanings &amp; Tune-Ups</div>
+          <div class="sc-title" data-anchor="tuneups">System Cleanings &amp; Tune-Ups</div>
           <div class="sc-text">Preventative maintenance to keep your equipment running efficiently, reduce energy bills, and avoid costly breakdowns.</div>
           <div class="sc-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
-        <div class="service-card" onclick="showPage('services',null)">
+        <div class="service-card" onclick="showPageTo('services','agreements')">
           <div class="sc-icon">
             <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9S3 16.97 3 12 7.03 3 12 3s9 4.03 9 9z"/></svg>
           </div>
-          <div class="sc-title">Service Agreements</div>
+          <div class="sc-title" data-anchor="agreements">Service Agreements</div>
           <div class="sc-text">Protect your investment with a scheduled maintenance plan. Priority service, annual tune-ups, and peace of mind year-round.</div>
           <div class="sc-link">Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
@@ -788,10 +792,7 @@ footer {
   <section id="about-strip">
     <div class="about-strip-inner">
       <div class="about-photo-wrap">
-        <div class="about-photo photo-placeholder" style="width:100%;height:100%;">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          <span>PHOTO — TECHNICIAN AT WORK</span>
-        </div>
+        <img src="images/service-repairs.jpg" alt="State Mechanical technician at work" style="width:100%;height:100%;object-fit:cover;">
       </div>
       <div class="about-text">
         <p class="section-label">About State Mechanical</p>
@@ -873,12 +874,12 @@ footer {
       <div class="divider center"></div>
       <p style="color:var(--gray);font-family:var(--font-serif);font-style:italic;margin-bottom:8px;">Commercial client logos will appear here as relationships are highlighted.</p>
       <div class="logo-strip">
-        <div class="logo-slot">Client Logo</div>
-        <div class="logo-slot">Client Logo</div>
-        <div class="logo-slot">Client Logo</div>
-        <div class="logo-slot">Client Logo</div>
-        <div class="logo-slot">Client Logo</div>
-        <div class="logo-slot">Client Logo</div>
+        <div class="logo-slot"><img src="images/client-logo-1.png" alt="Commercial client" style="max-width:120px;max-height:50px;object-fit:contain;opacity:0.7;filter:grayscale(100%);transition:opacity 0.2s,filter 0.2s;" onmouseover="this.style.opacity=1;this.style.filter='none'" onmouseout="this.style.opacity=0.7;this.style.filter='grayscale(100%)'"></div>
+        <div class="logo-slot"><img src="images/client-logo-2.png" alt="Commercial client" style="max-width:120px;max-height:50px;object-fit:contain;opacity:0.7;filter:grayscale(100%);transition:opacity 0.2s,filter 0.2s;" onmouseover="this.style.opacity=1;this.style.filter='none'" onmouseout="this.style.opacity=0.7;this.style.filter='grayscale(100%)'"></div>
+        <div class="logo-slot"><img src="images/client-logo-3.png" alt="Commercial client" style="max-width:120px;max-height:50px;object-fit:contain;opacity:0.7;filter:grayscale(100%);transition:opacity 0.2s,filter 0.2s;" onmouseover="this.style.opacity=1;this.style.filter='none'" onmouseout="this.style.opacity=0.7;this.style.filter='grayscale(100%)'"></div>
+        <div class="logo-slot"><img src="images/client-logo-4.png" alt="Commercial client" style="max-width:120px;max-height:50px;object-fit:contain;opacity:0.7;filter:grayscale(100%);transition:opacity 0.2s,filter 0.2s;" onmouseover="this.style.opacity=1;this.style.filter='none'" onmouseout="this.style.opacity=0.7;this.style.filter='grayscale(100%)'"></div>
+        <div class="logo-slot"><img src="images/client-logo-5.png" alt="Commercial client" style="max-width:120px;max-height:50px;object-fit:contain;opacity:0.7;filter:grayscale(100%);transition:opacity 0.2s,filter 0.2s;" onmouseover="this.style.opacity=1;this.style.filter='none'" onmouseout="this.style.opacity=0.7;this.style.filter='grayscale(100%)'"></div>
+        <div class="logo-slot"><img src="images/client-logo-6.png" alt="Commercial client" style="max-width:120px;max-height:50px;object-fit:contain;opacity:0.7;filter:grayscale(100%);transition:opacity 0.2s,filter 0.2s;" onmouseover="this.style.opacity=1;this.style.filter='none'" onmouseout="this.style.opacity=0.7;this.style.filter='grayscale(100%)'"></div>
       </div>
     </div>
   </section>
@@ -907,12 +908,10 @@ footer {
 
   <div class="service-block">
     <div class="service-block-inner">
-      <div class="service-block-photo photo-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>PHOTO — HVAC REPAIR</span>
-      </div>
+      <img src="images/service-repairs.jpg" alt="HVAC repair service" class="service-block-photo" style="width:100%;height:100%;object-fit:cover;">
       <div class="service-block-text">
         <p class="section-label">Service 01</p>
+        <div id="repairs"></div>
         <h2 class="section-title">Heating &amp; Cooling Repairs</h2>
         <div class="divider"></div>
         <p class="section-sub">When your system stops working, you need answers fast. Our technicians diagnose and repair all makes and models of heating and cooling equipment for both residential and commercial properties.</p>
@@ -931,12 +930,10 @@ footer {
 
   <div class="service-block">
     <div class="service-block-inner">
-      <div class="service-block-photo photo-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>PHOTO — EQUIPMENT INSTALL</span>
-      </div>
+      <img src="images/service-installation.jpg" alt="HVAC system installation" class="service-block-photo" style="width:100%;height:100%;object-fit:cover;">
       <div class="service-block-text">
         <p class="section-label">Service 02</p>
+        <div id="installation"></div>
         <h2 class="section-title">System Installation</h2>
         <div class="divider"></div>
         <p class="section-sub">Whether you're replacing an aging system or building new, we help you select the right equipment for your space and budget — then install it correctly, guaranteed.</p>
@@ -955,12 +952,10 @@ footer {
 
   <div class="service-block">
     <div class="service-block-inner">
-      <div class="service-block-photo photo-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>PHOTO — TUNE-UP / CLEANING</span>
-      </div>
+      <img src="images/service-tuneups.jpg" alt="HVAC tune-up and cleaning" class="service-block-photo" style="width:100%;height:100%;object-fit:cover;">
       <div class="service-block-text">
         <p class="section-label">Service 03</p>
+        <div id="tuneups"></div>
         <h2 class="section-title">System Cleanings &amp; Tune-Ups</h2>
         <div class="divider"></div>
         <p class="section-sub">A well-maintained system runs more efficiently, lasts longer, and is far less likely to fail on the hottest or coldest day of the year. Schedule your seasonal tune-up today.</p>
@@ -979,12 +974,10 @@ footer {
 
   <div class="service-block">
     <div class="service-block-inner">
-      <div class="service-block-photo photo-placeholder">
-        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-        <span>PHOTO — SERVICE AGREEMENT</span>
-      </div>
+      <img src="images/service-agreements.jpg" alt="HVAC service agreement" class="service-block-photo" style="width:100%;height:100%;object-fit:cover;">
       <div class="service-block-text">
         <p class="section-label">Service 04</p>
+        <div id="agreements"></div>
         <h2 class="section-title">Service Agreements</h2>
         <div class="divider"></div>
         <p class="section-sub">Our maintenance agreements give you scheduled, priority service throughout the year — so you never have to worry about whether your system is ready for the season ahead.</p>
@@ -1032,10 +1025,7 @@ footer {
         <p>When you call State Mechanical, you're not calling a call center or a national franchise. You're calling a local company that has been part of this community for over half a century. <strong>That means something to us — and we intend to keep earning it.</strong></p>
         <a href="tel:7065091126" class="btn btn-red" style="margin-top:16px;">Call Us Today</a>
       </div>
-      <div class="team-photo-wrap photo-placeholder">
-        <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-        <span>OWNER / TEAM PHOTO</span>
-      </div>
+      <img src="images/team-photo.jpg" alt="Jacob Still — State Mechanical Heating &amp; Air" class="team-photo-wrap" style="width:100%;height:100%;object-fit:cover;object-position:top;">
     </div>
   </section>
 
@@ -1090,9 +1080,7 @@ footer {
     <div class="blog-inner">
       <div class="blog-grid">
         <div class="blog-card">
-          <div class="blog-card-img photo-placeholder" style="width:100%;height:200px;">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
+          <div class="blog-card-img"><img src="images/blog-filter.jpg" alt="How often to change your air filter" style="width:100%;height:200px;object-fit:cover;display:block;"></div>
           <div class="blog-card-body">
             <span class="blog-tag">Maintenance</span>
             <div class="blog-card-title">How Often Should You Change Your Air Filter?</div>
@@ -1101,9 +1089,7 @@ footer {
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img photo-placeholder" style="width:100%;height:200px;">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
+          <div class="blog-card-img"><img src="images/blog-ac-service.jpg" alt="Signs your AC needs service" style="width:100%;height:200px;object-fit:cover;display:block;"></div>
           <div class="blog-card-body">
             <span class="blog-tag">Cooling</span>
             <div class="blog-card-title">5 Signs Your AC Needs Service Before Summer</div>
@@ -1112,9 +1098,7 @@ footer {
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img photo-placeholder" style="width:100%;height:200px;">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
+          <div class="blog-card-img"><img src="images/blog-heat-pump.jpg" alt="Is a heat pump right for your home" style="width:100%;height:200px;object-fit:cover;display:block;"></div>
           <div class="blog-card-body">
             <span class="blog-tag">Heating</span>
             <div class="blog-card-title">Is a Heat Pump Right for Your Georgia Home?</div>
@@ -1123,9 +1107,7 @@ footer {
           </div>
         </div>
         <div class="blog-card">
-          <div class="blog-card-img photo-placeholder" style="width:100%;height:200px;">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-          </div>
+          <div class="blog-card-img"><img src="images/blog-agreement.jpg" alt="How a service agreement saves money" style="width:100%;height:200px;object-fit:cover;display:block;"></div>
           <div class="blog-card-body">
             <span class="blog-tag">Savings</span>
             <div class="blog-card-title">How a Service Agreement Can Save You Money</div>
@@ -1292,6 +1274,20 @@ footer {
 
 <script>
 // ── PAGE NAVIGATION ───────────────────────────────────────────────
+function showPageTo(id, anchor) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  document.querySelectorAll('#navbar nav a').forEach(a => a.classList.remove('active'));
+  window.scrollTo({ top: 0, behavior: 'instant' });
+  setTimeout(function() {
+    var el = document.getElementById(anchor);
+    if (el) {
+      var offset = el.getBoundingClientRect().top + window.scrollY - 120;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
+  }, 60);
+}
+
 function showPage(id, linkEl) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
