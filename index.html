@@ -252,7 +252,7 @@ a { color: inherit; text-decoration: none; }
 /* Services preview */
 #services-preview { background: var(--white); }
 .services-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: grid; grid-template-columns: repeat(2, 1fr);
   gap: 2px; background: var(--border);
   border: 1px solid var(--border);
   border-radius: var(--radius); overflow: hidden;
@@ -263,6 +263,7 @@ a { color: inherit; text-decoration: none; }
   cursor: pointer;
 }
 .service-card:hover { background: var(--black); }
+.service-card[style*="grid-column"]:hover { background: #1a1a1a !important; }
 .service-card:hover .sc-icon { color: var(--red); }
 .service-card:hover .sc-title { color: var(--white); }
 .service-card:hover .sc-text { color: rgba(255,255,255,0.65); }
@@ -752,15 +753,17 @@ footer {
       <h2 class="section-title">Complete Heating &amp; Cooling Solutions</h2>
       <div class="divider"></div>
       <div class="services-grid">
-        <div class="service-card" onclick="showPageTo('services','specializations')" style="border-top:3px solid var(--red);">
-          <div class="sc-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <div class="service-card" onclick="showPageTo('services','specializations')" style="grid-column:1/-1;background:var(--black);display:flex;align-items:center;gap:48px;padding:40px 36px;border-top:3px solid var(--red);">
+          <div class="sc-icon" style="flex-shrink:0;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
             </svg>
           </div>
-          <div class="sc-title">Specializations</div>
-          <div class="sc-text">Mini-split installations, full unit change-outs, and rooftop systems for residential and commercial. These are not add-ons for us &mdash; they are what we do best.</div>
-          <div class="sc-link">See Our Specializations <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          <div style="flex:1;">
+            <div class="sc-title" style="color:var(--white);font-size:1.4rem;margin-bottom:8px;">Specializations</div>
+            <div class="sc-text" style="color:rgba(255,255,255,0.6);margin-bottom:0;max-width:680px;">Mini-split installations, full unit change-outs, and rooftop systems &mdash; for both residential and commercial customers. These are not add-ons for us. They are what we do best.</div>
+          </div>
+          <div class="sc-link" style="flex-shrink:0;white-space:nowrap;">See Our Specializations <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
         <div class="service-card" onclick="showPageTo('services','repairs')">
           <div class="sc-icon">
