@@ -1258,61 +1258,63 @@ footer {
       </div>
 
       <div class="contact-form">
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(window.formSubmitting){formSubmitted();}"></iframe>
         <h3>Service Request Form</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label>First Name</label>
-            <input type="text" placeholder="John">
+        <form id="serviceForm" action="https://docs.google.com/forms/d/e/1FAIpQLScSsVcV667zCuIJgOsSoEhZ93kd3bC1rZntNwDCd9Znik5qMw/formResponse" method="POST" target="hidden_iframe" onsubmit="window.formSubmitting=true;">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" name="entry.1507531616" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" name="entry.1639976315" placeholder="Smith" required>
+            </div>
           </div>
-          <div class="form-group">
-            <label>Last Name</label>
-            <input type="text" placeholder="Smith">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="entry.1994959364" placeholder="(706) 000-0000" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="entry.1906090053" placeholder="you@email.com">
+            </div>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Phone Number</label>
-            <input type="tel" placeholder="(706) 000-0000">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Service Type</label>
+              <select name="entry.528089002" required>
+                <option value="">Select a service...</option>
+                <option value="Heating Repair">Heating Repair</option>
+                <option value="Cooling / AC Repair">Cooling / AC Repair</option>
+                <option value="System Installation">System Installation</option>
+                <option value="System Cleaning / Tune-Up">System Cleaning / Tune-Up</option>
+                <option value="Service Agreement">Service Agreement</option>
+                <option value="Mini-Split Installation">Mini-Split Installation</option>
+                <option value="Unit Change-Out">Unit Change-Out</option>
+                <option value="Rooftop Unit">Rooftop Unit</option>
+                <option value="Other / Not Sure">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Customer Type</label>
+              <select name="entry.337262388" required>
+                <option value="">Select...</option>
+                <option value="Residential">Residential</option>
+                <option value="Commercial">Commercial</option>
+              </select>
+            </div>
           </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="you@email.com">
+          <div class="form-submit">
+            <button type="submit" class="btn btn-red">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+              Submit Request
+            </button>
           </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Service Type</label>
-            <select>
-              <option value="">Select a service...</option>
-              <option>Heating Repair</option>
-              <option>Cooling / AC Repair</option>
-              <option>System Installation</option>
-              <option>System Cleaning / Tune-Up</option>
-              <option>Service Agreement</option>
-              <option>Other / Not Sure</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Customer Type</label>
-            <select>
-              <option value="">Select...</option>
-              <option>Residential</option>
-              <option>Commercial</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Describe Your Issue or Request</label>
-          <textarea placeholder="Tell us a little about what's going on with your system, or what you're looking for..."></textarea>
-        </div>
-        <div class="form-submit">
-          <button class="btn btn-red" onclick="submitForm()">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
-            Submit Request
-          </button>
-        </div>
+        </form>
         <div class="form-success" id="formSuccess">
-          ✓ Thank you! We received your request and will be in touch shortly. For faster service, call us at 706-509-1126.
+          &#10003; Thank you! We received your request and will be in touch shortly. For faster service, call us at 706-509-1126.
         </div>
       </div>
     </div>
