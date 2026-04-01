@@ -1461,10 +1461,19 @@ function updateCarousel() {
 setInterval(() => moveCarousel(1), 5000);
 
 // ── FORM ──────────────────────────────────────────────────────────
-function submitForm() {
-  const success = document.getElementById('formSuccess');
-  success.style.display = 'block';
-  setTimeout(() => { success.style.display = 'none'; }, 6000);
+window.formSubmitting = false;
+
+function formSubmitted() {
+  window.formSubmitting = false;
+  var form = document.getElementById('serviceForm');
+  var success = document.getElementById('formSuccess');
+  if (form) {
+    form.reset();
+    form.style.display = 'none';
+  }
+  if (success) {
+    success.style.display = 'block';
+  }
 }
 </script>
 </body>
