@@ -41,6 +41,7 @@ a { color: inherit; text-decoration: none; }
 /* ── STICKY PHONE BAR ─────────────────────────────────────────────── */
 #phone-bar {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  transition: transform 0.3s ease;
   background: var(--red);
   display: flex; align-items: center; justify-content: center; gap: 12px;
   padding: 8px 20px;
@@ -66,6 +67,7 @@ a { color: inherit; text-decoration: none; }
   padding: 0 40px;
   height: 70px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08); border-bottom: 1px solid var(--border);
+  transition: top 0.3s ease;
 }
 #navbar .nav-logo img { height: 52px; width: auto; }
 #navbar nav { display: flex; gap: 0; }
@@ -95,6 +97,7 @@ a { color: inherit; text-decoration: none; }
 .hamburger span { width: 25px; height: 2px; background: var(--charcoal); display: block; transition: 0.3s; }
 #mobile-menu {
   display: none; position: fixed; top: 110px; left: 0; right: 0;
+  transition: top 0.3s ease;
   background: var(--black); z-index: 998;
   flex-direction: column; padding: 10px 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -655,6 +658,7 @@ footer {
   .hero-content { padding: 40px 20px; }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .blog-grid { grid-template-columns: 1fr; }
+  .spec-link { display: none !important; }
 }
 </style>
 </head>
@@ -763,7 +767,7 @@ footer {
             <div class="sc-title" style="color:var(--white);font-size:1.4rem;margin-bottom:8px;">Specializations</div>
             <div class="sc-text" style="color:rgba(255,255,255,0.6);margin-bottom:0;max-width:680px;">Mini-split installations, full unit change-outs, and rooftop systems &mdash; for both residential and commercial customers. These are not add-ons for us. They are what we do best.</div>
           </div>
-          <div class="sc-link" style="flex-shrink:0;white-space:nowrap;">See Our Specializations <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          <div class="sc-link spec-link" style="flex-shrink:0;white-space:nowrap;">See Our Specializations <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
         <div class="service-card" onclick="showPageTo('services','repairs')">
           <div class="sc-icon">
@@ -1387,19 +1391,27 @@ function toggleMobile() {
 
 // ── STICKY PHONE BAR ──────────────────────────────────────────────
 let lastScroll = 0;
+const PHONE_BAR_H = 40; // height of phone bar in px
+
 window.addEventListener('scroll', () => {
-  const bar = document.getElementById('phone-bar');
-  const nav = document.getElementById('navbar');
+  const bar   = document.getElementById('phone-bar');
+  const nav   = document.getElementById('navbar');
+  const menu  = document.getElementById('mobile-menu');
   const scrollY = window.scrollY;
-  // Hide phone bar on scroll down, show on scroll up
+  const navH    = nav.offsetHeight;
+
   if (scrollY > lastScroll && scrollY > 80) {
+    // Scrolling DOWN — hide phone bar, slide navbar to top
     bar.classList.add('hidden');
     nav.style.top = '0';
+    menu.style.top = navH + 'px';
   } else {
+    // Scrolling UP — show phone bar, push navbar down
     bar.classList.remove('hidden');
-    nav.style.top = '40px';
+    nav.style.top = PHONE_BAR_H + 'px';
+    menu.style.top = (PHONE_BAR_H + navH) + 'px';
   }
-  lastScroll = scrollY;
+  lastScroll = scrollY <= 0 ? 0 : scrollY;
 });
 
 // ── CAROUSEL ──────────────────────────────────────────────────────
