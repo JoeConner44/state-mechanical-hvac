@@ -94,6 +94,15 @@ a { color: inherit; text-decoration: none; }
 
 /* hamburger */
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+.mobile-call-btn {
+  display: none; align-items: center; gap: 7px;
+  background: var(--red); color: var(--white);
+  font-family: var(--font-head); font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 8px 14px; border-radius: var(--radius);
+  transition: background 0.2s;
+}
+.mobile-call-btn:hover { background: var(--red-dark); }
 .hamburger span { width: 25px; height: 2px; background: var(--charcoal); display: block; transition: 0.3s; }
 #mobile-menu {
   display: none; position: fixed; top: 110px; left: 0; right: 0;
@@ -652,13 +661,17 @@ footer {
   .form-row { grid-template-columns: 1fr; }
 }
 @media (max-width: 700px) {
-  #navbar { padding: 0 20px; }
+  #phone-bar { display: none; }
+  .mobile-call-btn { display: flex; }
+  #navbar { padding: 0 16px; top: 0 !important; }
   #navbar nav { display: none; }
   .hamburger { display: flex; }
   .hero-content { padding: 40px 20px; }
   .footer-inner { grid-template-columns: 1fr; gap: 32px; }
   .blog-grid { grid-template-columns: 1fr; }
   .spec-link { display: none !important; }
+  .page-top { padding-top: 70px; }
+  #mobile-menu { top: 70px !important; }
 }
 </style>
 </head>
@@ -683,6 +696,10 @@ footer {
     <a href="#" onclick="showPage('hvac101',this)">HVAC 101</a>
     <a href="#" onclick="showPage('contact',this)" class="nav-cta">Request Service</a>
   </nav>
+  <a href="tel:7065091126" class="mobile-call-btn">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.27 9.7 19.79 19.79 0 01.22 1.11 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+    Call Now
+  </a>
   <div class="hamburger" onclick="toggleMobile()">
     <span></span><span></span><span></span>
   </div>
@@ -1399,17 +1416,22 @@ window.addEventListener('scroll', () => {
   const menu  = document.getElementById('mobile-menu');
   const scrollY = window.scrollY;
   const navH    = nav.offsetHeight;
+  const isMobile = window.innerWidth <= 700;
 
-  if (scrollY > lastScroll && scrollY > 80) {
-    // Scrolling DOWN — hide phone bar, slide navbar to top
-    bar.classList.add('hidden');
+  if (isMobile) {
+    // On mobile: no phone bar, navbar always fixed at top:0
     nav.style.top = '0';
     menu.style.top = navH + 'px';
   } else {
-    // Scrolling UP — show phone bar, push navbar down
-    bar.classList.remove('hidden');
-    nav.style.top = PHONE_BAR_H + 'px';
-    menu.style.top = (PHONE_BAR_H + navH) + 'px';
+    if (scrollY > lastScroll && scrollY > 80) {
+      bar.classList.add('hidden');
+      nav.style.top = '0';
+      menu.style.top = navH + 'px';
+    } else {
+      bar.classList.remove('hidden');
+      nav.style.top = PHONE_BAR_H + 'px';
+      menu.style.top = (PHONE_BAR_H + navH) + 'px';
+    }
   }
   lastScroll = scrollY <= 0 ? 0 : scrollY;
 });
