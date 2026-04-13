@@ -20,9 +20,27 @@
 <div id="navbar">
   <div class="nav-logo"><a href="/"><img src="/assets/logo.png" alt="State Mechanical Heating &amp; Air"></a></div>
   <nav>
-    <a href="/">Home</a>
-    <a href="/services/">Services</a>
-    <a href="/about/">About</a>
+    <a href="/" >Home</a>
+    <div class="nav-item">
+      <a href="/services/">Services <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></a>
+      <div class="nav-dropdown">
+        <span class="nav-dropdown-label">Residential</span>
+        <a href="/services/">All Residential Services</a>
+        <a href="/services/#repairs">Heating &amp; Cooling Repair</a>
+        <a href="/services/#installation">System Installation</a>
+        <a href="/services/#tuneups">Tune-Ups &amp; Cleanings</a>
+        <a href="/services/#agreements">Service Agreements</a>
+        <a href="/services/#specializations">Specializations</a>
+        <hr>
+        <span class="nav-dropdown-label">Commercial</span>
+        <a href="/commercial/">All Commercial Services</a>
+        <a href="/commercial/#rooftop">Rooftop Units</a>
+        <a href="/commercial/#miniSplit">Mini-Split Systems</a>
+        <a href="/commercial/#remodels">Remodels &amp; Retrofits</a>
+      </div>
+    </div>
+    <a href="/about/" >About</a>
+    <a href="/locations/" >Locations</a>
     <a href="/hvac101/" class="active">HVAC 101</a>
     <a href="/contact/" class="nav-cta">Request Service</a>
   </nav>
@@ -31,10 +49,23 @@
 </div>
 <div id="mobile-menu">
   <a href="/">Home</a>
-  <a href="/services/">Services</a>
+  <div class="mobile-nav-section">
+    <span class="mobile-nav-label">Residential Services</span>
+    <a href="/services/">All Residential Services</a>
+    <a href="/services/#repairs">Repairs</a>
+    <a href="/services/#installation">Installation</a>
+    <a href="/services/#tuneups">Tune-Ups</a>
+    <a href="/services/#agreements">Service Agreements</a>
+  </div>
+  <div class="mobile-nav-section">
+    <span class="mobile-nav-label">Commercial Services</span>
+    <a href="/commercial/">All Commercial Services</a>
+    <a href="/commercial/#remodels">Remodels &amp; Retrofits</a>
+    <a href="/commercial/#rooftop">Rooftop Units</a>
+  </div>
   <a href="/about/">About</a>
-  <a href="/hvac101/">HVAC 101</a>
   <a href="/locations/">Locations</a>
+  <a href="/hvac101/">HVAC 101</a>
   <a href="/contact/">Request Service</a>
 </div>
 <main class="page-top">
