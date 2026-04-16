@@ -402,3 +402,7 @@ footer { background: var(--black); color: var(--white); padding: 60px 20px 0; }
   letter-spacing: 0.18em; text-transform: uppercase; color: var(--silver);
   padding: 8px 30px 2px; display: block;
 }
+
+/* ── IOS OVERSCROLL FIX ──────────────────────────────────────────── */
+html { background: var(--black); }
+body { overscroll-behavior-y: none; }
