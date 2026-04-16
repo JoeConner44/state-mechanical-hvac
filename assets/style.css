@@ -85,11 +85,12 @@ a { color: inherit; text-decoration: none; }
 }
 .mobile-call-btn:hover { background: var(--red-dark); }
 #mobile-menu {
-  display: none; position: fixed; top: 110px; left: 0; right: 0;
+  display: none; position: fixed; top: 70px; left: 0; right: 0;
   transition: top 0.3s ease;
   background: var(--black); z-index: 998;
   flex-direction: column; padding: 10px 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  height: auto; max-height: calc(100vh - 70px); overflow-y: auto;
 }
 #mobile-menu.open { display: flex; }
 #mobile-menu a {
@@ -404,5 +405,8 @@ footer { background: var(--black); color: var(--white); padding: 60px 20px 0; }
 }
 
 /* ── IOS OVERSCROLL FIX ──────────────────────────────────────────── */
-html { background: var(--black); }
-body { overscroll-behavior-y: none; }
+html, body {
+  background: var(--black);
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+}
