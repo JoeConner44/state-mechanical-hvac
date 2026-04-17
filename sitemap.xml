@@ -2,133 +2,193 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://statemechanicalga.com/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/services/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/services/ac-repair/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/services/heating-repair/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/services/hvac-installation/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/services/tune-up/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/services/service-agreements/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/services/mini-splits/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/commercial/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://statemechanicalga.com/commercial/rooftop-units/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/commercial/remodels-retrofits/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/commercial/commercial-mini-splits/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://statemechanicalga.com/commercial/unit-changeouts/</loc>
+    <lastmod>2026-04-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://statemechanicalga.com/about/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/contact/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/locations/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/locations/monroe-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/locations/social-circle-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/locations/loganville-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/locations/good-hope-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/locations/madison-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/commercial/monroe-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/commercial/social-circle-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/commercial/loganville-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/commercial/good-hope-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/commercial/madison-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/commercial/covington-ga/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/hvac101/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/hvac101/air-filters/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/hvac101/ac-service/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/hvac101/heat-pump/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://statemechanicalga.com/hvac101/service-agreement/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

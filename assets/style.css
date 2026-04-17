@@ -410,3 +410,105 @@ html, body {
   overscroll-behavior: none;
   -webkit-overflow-scrolling: auto;
 }
+
+/* ── SERVICE PAGE COMPONENTS ─────────────────────────────────────── */
+.service-sidebar {
+  background: var(--black); border-radius: var(--radius);
+  padding: 32px; position: sticky; top: 130px;
+}
+.service-sidebar h3 {
+  font-family: var(--font-head); font-size: 1rem; font-weight: 700;
+  color: var(--white); margin-bottom: 20px; letter-spacing: 0.04em;
+}
+.service-sidebar-field { margin-bottom: 16px; }
+.service-sidebar-label {
+  font-family: var(--font-head); font-size: 0.7rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--silver); margin-bottom: 4px;
+}
+.service-sidebar-value { font-size: 0.9rem; color: rgba(255,255,255,0.7); }
+.service-sidebar-phone {
+  font-family: var(--font-head); font-size: 1.3rem;
+  font-weight: 700; color: var(--red);
+}
+.service-sidebar-back {
+  font-family: var(--font-head); font-size: 0.8rem; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--gray);
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 12px;
+}
+.related-services-box {
+  background: var(--lighter); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px 24px; margin-top: 32px;
+}
+.related-services-label {
+  font-family: var(--font-head); font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--silver); margin-bottom: 12px;
+}
+.related-services-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.related-link {
+  font-family: var(--font-head); font-size: 0.82rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--red);
+  display: inline-flex; align-items: center; gap: 5px;
+}
+
+/* ── COMMERCIAL PAGE COMPONENTS ──────────────────────────────────── */
+.commercial-stat-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.commercial-stat-card {
+  padding: 28px 22px; border-radius: var(--radius); border-top: 3px solid var(--red);
+}
+.commercial-stat-card.dark { background: var(--black); }
+.commercial-stat-card.light { background: var(--light); }
+.commercial-stat-num {
+  font-family: var(--font-head); font-size: 2rem; font-weight: 700;
+  color: var(--red); line-height: 1;
+}
+.commercial-stat-label {
+  font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+  margin-top: 6px; font-family: var(--font-head);
+}
+.commercial-stat-card.dark .commercial-stat-label { color: rgba(255,255,255,0.5); }
+.commercial-stat-card.light .commercial-stat-label { color: var(--gray); }
+.building-type-grid {
+  display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 2px; background: rgba(255,255,255,0.05);
+  border-radius: var(--radius); overflow: hidden; margin-top: 8px;
+}
+.building-type-card {
+  background: #111; padding: 30px 24px; border-left: 3px solid var(--red);
+}
+.building-type-title {
+  font-family: var(--font-head); font-size: 1rem; font-weight: 600;
+  color: var(--white); margin-bottom: 6px;
+}
+.building-type-text { font-size: 0.85rem; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+/* ── LOCATION CITY CARD ───────────────────────────────────────────── */
+.city-card {
+  display: flex; align-items: center; gap: 14px;
+  padding: 20px 22px; border: 1px solid var(--border);
+  border-radius: var(--radius); transition: border-color 0.2s, box-shadow 0.2s;
+}
+.city-card:hover { border-color: var(--red); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.city-icon {
+  width: 36px; height: 36px; background: var(--red);
+  border-radius: var(--radius); display: flex; align-items: center;
+  justify-content: center; flex-shrink: 0;
+}
+.city-name { font-family: var(--font-head); font-weight: 700; color: var(--black); }
+.city-county { font-size: 0.8rem; color: var(--silver); font-family: var(--font-head); letter-spacing: 0.05em; }
+
+/* ── QUICK LINKS BAR ──────────────────────────────────────────────── */
+.quick-links-bar {
+  background: var(--light); padding: 32px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.quick-links-bar-label {
+  font-family: var(--font-head); font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--silver); margin-bottom: 16px; text-align: center;
+}
+.quick-links-bar-links {
+  display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
+}
