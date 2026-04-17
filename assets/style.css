@@ -512,3 +512,11 @@ html, body {
 .quick-links-bar-links {
   display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;
 }
+
+/* ── DARK SECTION TEXT OVERRIDES ─────────────────────────────────── */
+.dark-section .section-title { color: var(--white); }
+.dark-section .section-sub { color: rgba(255,255,255,0.65); }
+.dark-section .section-label { color: var(--red); }
+.dark-section .divider { background: var(--red); }
+.dark-section .about-story-text p { color: rgba(255,255,255,0.65); }
+.dark-section .about-story-text p strong { color: var(--white); }

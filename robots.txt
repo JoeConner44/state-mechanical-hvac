@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block admin and utility pages
+Disallow: /terms/
+Disallow: /privacy/
+
+# Sitemap location
+Sitemap: https://statemechanicalga.com/sitemap.xml
