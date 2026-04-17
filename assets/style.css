@@ -405,10 +405,14 @@ footer { background: var(--black); color: var(--white); padding: 60px 20px 0; }
 }
 
 /* ── IOS OVERSCROLL FIX ──────────────────────────────────────────── */
-html, body {
+html {
   background: var(--black);
   overscroll-behavior: none;
   -webkit-overflow-scrolling: auto;
+}
+body {
+  background: var(--white);
+  overscroll-behavior: none;
 }
 
 /* ── SERVICE PAGE COMPONENTS ─────────────────────────────────────── */
