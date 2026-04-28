@@ -73,3 +73,27 @@ window.formSubmitted = function () {
   if (form)    { form.reset(); form.style.display = 'none'; }
   if (success) { success.style.display = 'block'; }
 };
+
+// ── DESKTOP PHONE LINK REDIRECT ───────────────────────────────────
+// On desktop (non-touch) devices, redirect tel: links to contact form
+(function () {
+  function isDesktop() {
+    return !('ontouchstart' in window) && !/Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+
+  function swapPhoneLinks() {
+    if (!isDesktop()) return;
+    var links = document.querySelectorAll('a[href="tel:7065091126"]');
+    links.forEach(function (link) {
+      // Skip the phone bar number itself — keep it as plain text reference
+      if (link.closest('#phone-bar')) return;
+      link.href = '/contact/';
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', swapPhoneLinks);
+  } else {
+    swapPhoneLinks();
+  }
+})();
