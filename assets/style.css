@@ -532,7 +532,7 @@ body {
 /* ── COMMERCIAL PAGE RESPONSIVE ──────────────────────────────────── */
 @media (max-width: 700px) {
   .commercial-why-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
-  .commercial-stat-grid { grid-template-columns: 1fr 1fr !important; }
+  .commercial-stat-grid { display: none !important; }
 }
 @media (max-width: 900px) {
   .commercial-why-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
