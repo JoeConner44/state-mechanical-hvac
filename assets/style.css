@@ -420,6 +420,10 @@ body {
   background: var(--black); border-radius: var(--radius);
   padding: 32px; position: sticky; top: 130px;
 }
+/* Sidebar column must be align-self:start so sticky is bounded by column height */
+.service-sidebar-col {
+  align-self: start;
+}
 .service-sidebar h3 {
   font-family: var(--font-head); font-size: 1rem; font-weight: 700;
   color: var(--white); margin-bottom: 20px; letter-spacing: 0.04em;
@@ -524,3 +528,18 @@ body {
 .dark-section .divider { background: var(--red); }
 .dark-section .about-story-text p { color: rgba(255,255,255,0.65); }
 .dark-section .about-story-text p strong { color: var(--white); }
+
+/* ── COMMERCIAL PAGE RESPONSIVE ──────────────────────────────────── */
+@media (max-width: 700px) {
+  .commercial-why-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .commercial-stat-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 900px) {
+  .commercial-why-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+}
+
+/* ── HIDE SIDEBAR ON MOBILE ──────────────────────────────────────── */
+@media (max-width: 700px) {
+  .service-sidebar-col { display: none; }
+  .service-content-grid { grid-template-columns: 1fr !important; }
+}
